@@ -50,7 +50,7 @@ function generatePassword() {
 
     // for loop to loop through charcter strings to generate user chosen password
     for(let i = 0; i > passwordLength.length; i++ ) {
-      newPassword += generatePassword(Math.random() * passwordLength)
+      newPassword += generatePassword[Math.floor(Math.random() * passwordLength.length)]
     }
     return newPassword;
 
