@@ -29,28 +29,28 @@ function generatePassword() {
 
   // window confirmation statements to add or not add specific character types
   var addSpecialCharacters = window.confirm("Would you like to add special characters to your password?");
-  if (addSpecialCharacters) {
-    generatedPass += passwordCharacters.specialCharacters;
+    if (addSpecialCharacters) {
+      generatedPass += passwordCharacters.specialCharacters;
   };
 
   var addNumericCharacters = window.confirm("Would you like to add numbers to your password?");
-  if (addNumericCharacters) {
-    generatedPass += passwordCharacters.passwordNumbers;
+    if (addNumericCharacters) {
+      generatedPass += passwordCharacters.passwordNumbers;
   };
 
   var addLowerCaseCharacters = window.confirm("Would you like to add lowercase characters to your password?");
-  if (addLowerCaseCharacters) {
-    generatedPass += passwordCharacters.lowerCase;
+    if (addLowerCaseCharacters) {
+      generatedPass += passwordCharacters.lowerCase;
   };
 
   var addUpperCaseCharacters = window.confirm("Would you like to add uppercase characters to your password?");
-  if (addUpperCaseCharacters) {
-    generatedPass += passwordCharacters.upperCase;
+    if (addUpperCaseCharacters) {
+      generatedPass += passwordCharacters.upperCase;
   };
 
     // for loop to loop through charcter strings to generate user chosen password
     for(let i = 0; i > passwordLength.length; i++ ) {
-      newPassword += generatePassword[Math.floor(Math.random() * passwordLength.length)]
+      newPassword += generatedPass[Math.floor(Math.random() * passwordLength.length)]
     }
     return newPassword;
 
