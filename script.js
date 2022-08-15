@@ -18,10 +18,10 @@ function generatePassword() {
     window.confirm("Valid password length!")  
   } else if (passwordLength < 8 || passwordLength > 128) {
     window.prompt("Please enter a number between 8 and 128.")
-    return null;
+    return;
   } else {
     window.prompt("Please enter a valid number.")
-    return null;
+    return;
   }
 
   var generatedPass = "";
@@ -47,10 +47,19 @@ function generatePassword() {
     if (addUpperCaseCharacters) {
       generatedPass += passwordCharacters.upperCase;
   };
-
+      // if statement to alert user if no character type is selected
+      if (addSpecialCharacters === false &&
+          addNumericCharacters === false &&
+          addLowerCaseCharacters === false &&
+          addUpperCaseCharacters === false
+          ){
+            window.alert("Please select at least one character type.")
+            return null;
+          }
+     
     // for loop to loop through charcter strings to generate user chosen password
-    for(let i = 0; i > passwordLength.length; i++ ) {
-      newPassword += generatedPass[Math.floor(Math.random() * passwordLength.length)]
+    for(let i = 0; i < passwordLength; i++ ) {
+      newPassword += generatedPass[Math.floor(Math.random() * generatedPass.length)]
     }
     return newPassword;
 
