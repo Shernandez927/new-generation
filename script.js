@@ -18,10 +18,10 @@ function generatePassword() {
     window.confirm("Valid password length!")  
   } else if (passwordLength < 8 || passwordLength > 128) {
     window.prompt("Please enter a number between 8 and 128.")
-    return;
+    return null;
   } else {
     window.prompt("Please enter a valid number.")
-    return;
+    return null;
   }
 
   var generatedPass = "";
