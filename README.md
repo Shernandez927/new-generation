@@ -57,6 +57,6 @@ SOFTWARE.
 
 ## Badges
 
-![reposize](https://img.shields.io/github/repo-size/shernandez927/new-generation?style=for-the-badge) ![licensebadge](https://img.shields.io/github/license/shernandez927/new-generation)
+![reposize](https://img.shields.io/github/repo-size/shernandez927/new-generation?style=for-the-badge) ![licensebadge](https://img.shields.io/github/license/shernandez927/new-generation?style=for-the-badge)
 
 
